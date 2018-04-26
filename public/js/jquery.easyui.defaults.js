@@ -1,0 +1,1 @@
+$.fn.tooltip.defaults.position = 'right';
