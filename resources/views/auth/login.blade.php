@@ -105,7 +105,7 @@
                             iconWidth:30" style="width:100%;height:45px;">
                 </div>
 
-                <div class="wrapper">
+                <div class="wrapper" style="background:url({{asset('images/ld32.gif')}}) no-repeat 334px 8px">
                     <input id="vcode" name="vcode" class="easyui-textbox" data-options="
                             prompt:'请输入右侧3位验证码，点击可更换',
                             required:true,
@@ -137,7 +137,7 @@
 
         function newCode()
         {
-            $('#vcodeimg').attr('src', '');
+            $('#vcodeimg').css('visibility', 'hidden')
             $.ajax({
                 url: '{{url('request-new-vcode')}}',
                 headers: {
@@ -145,7 +145,13 @@
                 },
                 type : 'post',
                 success : function(result) {
-                    $('#vcodeimg').attr('src', 'data:image/png;base64,' + result);
+                    $('#vcodeimg').attr('src', 'data:image/png;base64,' + result).css('visibility', 'visible');
+                    $.messager.alert('错误',
+                        '错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误错误',
+                        'error');
+                },
+                error : function(xhr) {
+
                 }
             });
         }
