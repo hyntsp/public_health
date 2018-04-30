@@ -1,7 +1,7 @@
 <?php
 /**
  * 版权所有 (c) 2017-2018 成都盛世华旭科技有限公司
- * Copyright (c) 2017-2018 Chengdu ShengShiHuaXu Ltd.
+ * Copyright (c) 2017-2018. Chengdu ShengShiHuaXu Scientific & Technical Ltd.
  */
 
 namespace App\Http\Requests;
