@@ -137,7 +137,7 @@
 
         function newCode()
         {
-            $('#vcodeimg').css('visibility', 'hidden')
+            $('#vcodeimg').css('visibility', 'hidden');
             $.ajax({
                 url: '{{url('request-new-vcode')}}',
                 headers: {
